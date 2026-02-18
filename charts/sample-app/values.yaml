@@ -1,0 +1,26 @@
+replicaCount: 2
+
+image:
+  repository: docker.io/library/nginx
+  tag: "1.24"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 250m
+    memory: 128Mi
+
+environment: "production"
+region: "us-east-1"
+
+config:
+  log_level: "info"
+  max_connections: 100
