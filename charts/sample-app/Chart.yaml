@@ -1,8 +1,7 @@
 apiVersion: v2
-appVersion: '1.0'
-description: A generic sample microservice Helm chart
 name: sample-app
-spec:
-  replicas: '1'
+description: A generic sample microservice Helm chart
 type: application
 version: 1.0.0
+appVersion: "1.0"
+
